@@ -247,11 +247,13 @@ class PlayerController : MonoBehaviour
     {
         CoinsText.text = $"Coins: {coins}";
     }
+
     public void UpdateHP(int value)
     {
         HP = Mathf.Clamp(HP + value, 0, maxHP);
         UpdateHPBarUI();
     }
+
     private void UpdateHPBarUI()
     {
         hpBarUI.fillAmount = Mathf.Clamp(HP / (float)maxHP, 0, 1f);
